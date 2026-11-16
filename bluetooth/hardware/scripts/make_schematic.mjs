@@ -1,7 +1,7 @@
 // Subvocal Lidar: 1550 nm laser self-mixing sensor for eyewear. Builds the OpenSchematic design
 // (hardware/subvocal-lidar.opensch.json). Every pin gets a short wire stub with a net label, so the netlist is defined
 // by the tables below.
-//   node hardware/scripts/make_schematic.mjs
+//   node bluetooth/hardware/scripts/make_schematic.mjs
 //
 // How it senses: a 1550 nm DFB laser shines on the skin over the jaw muscle (masseter). A little of the light scattered
 // back re-enters the laser and modulates its power (self-mixing interferometry). The laser's own monitor photodiode

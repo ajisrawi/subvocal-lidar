@@ -2,7 +2,7 @@
 //   LaserPads_4_TO56   4 hand-solder pads for a 1550 nm TO-56 laser at the edge of the board's laser notch
 //   Antenna_W3008      Pulse W3008 2.4 GHz chip antenna (1206), pad 1 feed, pad 2 ground (datasheet: either end may feed)
 //   BatteryPads_2      2 solder pads for the LiPo cell's wires
-//   node hardware/scripts/make_footprints.mjs
+//   node bluetooth/hardware/scripts/make_footprints.mjs
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
