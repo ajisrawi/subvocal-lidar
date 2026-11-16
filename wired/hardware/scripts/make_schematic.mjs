@@ -64,8 +64,8 @@ boxPart('OPAMP_DBV', 'U', [['5', 'V+', P], ['2', 'V-', P], ['3', 'IN+', I], ['4'
 boxPart('OPAMP2', 'U', [['8', 'V+', P], ['4', 'V-', P], ['3', '+A', I], ['2', '-A', I], ['5', '+B', I], ['6', '-B', I]], [['1', 'OUTA', O], ['7', 'OUTB', O]],
   { Value: 'TLV9062', 'PCB Footprint': 'VSSOP-8_3x3mm_P0.65mm' }, 'Dual op-amp, rail-to-rail, 10 MHz');
 boxPart('NPN_BEC', 'Q', [['1', 'B', I]], [['3', 'C', PS], ['2', 'E', PS]], { Value: 'MMBT3904', 'PCB Footprint': 'SOT-23' }, 'NPN transistor (SOT-23: 1 B, 2 E, 3 C)');
-boxPart('LDO_DQN', 'U', [['4', 'IN', P], ['3', 'EN', I], ['2', 'GND', P], ['5', 'PAD', P]], [['1', 'OUT', P]],
-  { Value: 'TPS7A2033DQN', 'PCB Footprint': 'Texas_X2SON-4_1x1mm_P0.65mm' }, '3.3 V 300 mA low-noise LDO, 1 x 1 mm');
+boxPart('LDO_DBV', 'U', [['1', 'IN', P], ['3', 'EN', I], ['2', 'GND', P]], [['5', 'OUT', P], ['4', 'NC', NC]],
+  { Value: 'TPS7A2033PDBVR', 'PCB Footprint': 'SOT-23-5' }, '3.3 V 300 mA low-noise LDO');
 boxPart('TCA9406', 'U', [['3', 'VCCA', P], ['6', 'OE', I], ['4', 'SDA_A', B], ['5', 'SCL_A', B], ['2', 'GND', P]], [['7', 'VCCB', P], ['1', 'SDA_B', B], ['8', 'SCL_B', B]],
   { Value: 'TCA9406', 'PCB Footprint': 'VSSOP-8_2.3x2mm_P0.5mm' }, 'I2C level shifter with 10k pull-ups (A: host VDDIO, B: 3.3 V)');
 boxPart('FPC_6', 'J', [['1', 'VIN', P], ['2', 'GND', P], ['3', 'VDDIO', P], ['4', 'SDA', B], ['5', 'SCL', B], ['6', 'IRQ', O]], [['MP', 'MP', PS]],
@@ -109,7 +109,7 @@ function place(pg, part, ref, x, y, conn, props = {}) {
 }
 const R = (pg, ref, x, y, a, b, value) => place(pg, 'R', ref, x, y, { 1: a, 2: b }, { Value: value, 'PCB Footprint': 'R_0402_1005Metric' });
 const C = (pg, ref, x, y, a, value, fp = 'C_0402_1005Metric', b = 'GND') => place(pg, 'C', ref, x, y, { 1: a, 2: b }, { Value: value, 'PCB Footprint': fp });
-const ldo = (pg, ref, x, y, en, out) => place(pg, 'LDO_DQN', ref, x, y, { 4: 'VIN', 3: en, 2: 'GND', 5: 'GND', 1: out });
+const ldo = (pg, ref, x, y, en, out) => place(pg, 'LDO_DBV', ref, x, y, { 1: 'VIN', 3: en, 2: 'GND', 5: out, 4: null });
 
 // ----- Host connector and power ----------------------------------------------
 {

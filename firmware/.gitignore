@@ -1,0 +1,5 @@
+build/
+*.err
+test/*.exe
+test/*.pdb
+test/*.ilk

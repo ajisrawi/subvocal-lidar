@@ -4,7 +4,7 @@
 // NOT from JLCPCB: the 1550 nm laser (LD1, hand-soldered, see docs/LASER.md).
 export const PARTS = [
   { value: 'TCA9406', footprint: 'VSSOP-8_2.3x2mm_P0.5mm', lcsc: 'C840107', mpn: 'TI TCA9406DCUR (I2C level shifter)', lib: 'extended', stock: 9290 },
-  { value: 'TPS7A2033DQN', footprint: 'Texas_X2SON-4_1x1mm_P0.65mm', lcsc: 'C46459900', mpn: 'TI TPS7A2033DQNR', lib: 'extended', stock: 5797 },
+  { value: 'TPS7A2033PDBVR', footprint: 'SOT-23-5', lcsc: 'C2862740', mpn: 'TI TPS7A2033PDBVR', lib: 'extended', stock: 128160 },
   { value: 'AFC07-S06FCA-00', footprint: 'Jushuo_AFC07-S06FCA-00_1x6-1MP_P0.50_Horizontal', lcsc: 'C262553', mpn: 'JUSHUO AFC07-S06FCA-00 (6-pin 0.5 mm FPC, bottom contact)', lib: 'extended', stock: 20725 },
   { value: 'nRF52832-QFAA', footprint: 'QFN-48-1EP_6x6mm_P0.4mm_EP4.6x4.6mm', lcsc: 'C77540', mpn: 'Nordic nRF52832-QFAA-R', lib: 'extended', stock: 24390 },
   { value: 'DAC7311', footprint: 'SOT-363_SC-70-6', lcsc: 'C128601', mpn: 'TI DAC7311IDCKR (12-bit)', lib: 'extended', stock: 8079 },
@@ -38,5 +38,4 @@ export const ROTATION_OFFSETS = [
   [/^QFN-/, 270],
   [/^VSSOP-8_3x3/, 270],
   [/^VSSOP-8_2.3x2/, 270],
-  [/^Texas_X2SON/, 0],
 ];
