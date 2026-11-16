@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="How Subvocal Lidar works: mouth a phrase, the 1550 nm laser sees skin movement as fringes, the module counts fringes into displacement, matches your trained phrases, and sends the text to the glasses">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E0245E"/>
+      <stop offset="1" stop-color="#6B2FB3"/>
+    </linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#B7BEC8"/>
+    </marker>
+    <style>
+      .card { fill: #FFFFFF; stroke: #E3E6EB; stroke-width: 2; }
+      .t { font: 700 20px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #14171C; }
+      .s { font: 15px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #5D6673; }
+      .ic { fill: none; stroke: url(#g); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect width="1200" height="300" rx="24" fill="#F6F7F9"/>
+
+  <!-- 1 mouth -->
+  <rect class="card" x="24" y="30" width="200" height="240" rx="18"/>
+  <path class="ic" d="M84 112q40 -24 80 0q-40 34 -80 0z"/>
+  <path class="ic" d="M96 112h56" stroke-width="4"/>
+  <text class="t" x="124" y="200" text-anchor="middle">Mouth it</text>
+  <text class="s" x="124" y="226" text-anchor="middle">silently, holding the</text>
+  <text class="s" x="124" y="246" text-anchor="middle">button or touchpad</text>
+
+  <path d="M228 150h30" stroke="#B7BEC8" stroke-width="3" marker-end="url(#a)"/>
+
+  <!-- 2 laser -->
+  <rect class="card" x="262" y="30" width="200" height="240" rx="18"/>
+  <path class="ic" d="M312 74h96"/>
+  <circle cx="392" cy="74" r="7" fill="#E0245E"/>
+  <path d="M390 84L362 136" fill="none" stroke="#E0245E" stroke-width="4" stroke-dasharray="3 7" stroke-linecap="round"/>
+  <path class="ic" d="M330 140q30 14 60 0" stroke-width="5"/>
+  <text class="t" x="362" y="200" text-anchor="middle">1550 nm laser</text>
+  <text class="s" x="362" y="226" text-anchor="middle">on the jaw muscle: one</text>
+  <text class="s" x="362" y="246" text-anchor="middle">fringe per 0.775 µm</text>
+
+  <path d="M466 150h30" stroke="#B7BEC8" stroke-width="3" marker-end="url(#a)"/>
+
+  <!-- 3 fringes -> displacement -->
+  <rect class="card" x="500" y="30" width="200" height="240" rx="18"/>
+  <path d="M528 120l14 -32v32l14 -32v32l14 -32v32l14 -32v32l14 -32v32l14 -32v32l14 -32v32" fill="none" stroke="#6B2FB3" stroke-width="3.5" stroke-linejoin="round"/>
+  <path class="ic" d="M530 150q40 -30 70 -6t70 -14" stroke-width="5"/>
+  <text class="t" x="600" y="200" text-anchor="middle">Count fringes</text>
+  <text class="s" x="600" y="226" text-anchor="middle">200 000 samples/s into</text>
+  <text class="s" x="600" y="246" text-anchor="middle">skin displacement</text>
+
+  <path d="M704 150h30" stroke="#B7BEC8" stroke-width="3" marker-end="url(#a)"/>
+
+  <!-- 4 match -->
+  <rect class="card" x="738" y="30" width="200" height="240" rx="18"/>
+  <rect x="790" y="66" width="96" height="22" rx="8" fill="#F0E6F7"/>
+  <rect x="790" y="96" width="96" height="22" rx="8" fill="url(#g)"/>
+  <rect x="790" y="126" width="96" height="22" rx="8" fill="#F0E6F7"/>
+  <text x="838" y="112" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">on my way</text>
+  <text class="t" x="838" y="200" text-anchor="middle">Match</text>
+  <text class="s" x="838" y="226" text-anchor="middle">your trained phrases,</text>
+  <text class="s" x="838" y="246" text-anchor="middle">on the module</text>
+
+  <path d="M942 150h30" stroke="#B7BEC8" stroke-width="3" marker-end="url(#a)"/>
+
+  <!-- 5 glasses / phone -->
+  <rect class="card" x="976" y="30" width="200" height="240" rx="18"/>
+  <circle class="ic" cx="1048" cy="100" r="22" stroke-width="5"/>
+  <circle class="ic" cx="1104" cy="100" r="22" stroke-width="5"/>
+  <path class="ic" d="M1070 98q6 -6 12 0" stroke-width="5"/>
+  <text class="t" x="1076" y="200" text-anchor="middle">Text</text>
+  <text class="s" x="1076" y="226" text-anchor="middle">to the glasses over I2C,</text>
+  <text class="s" x="1076" y="246" text-anchor="middle">or typed over Bluetooth</text>
+</svg>

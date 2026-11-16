@@ -1,12 +1,40 @@
-# Subvocal Lidar
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.svg">
+    <img alt="Subvocal Lidar" src="docs/assets/logo-light.svg" width="600">
+  </picture>
+</p>
+
+<p align="center">
+  <b>Talk to your glasses without making a sound.</b><br>
+  A 1550 nm laser in the temple reads the micro-movements of your jaw muscle while you silently mouth words,<br>
+  and turns them into text: inside smart glasses over I2C, or as a Bluetooth keyboard from a clip-on pod.
+</p>
+
+<p align="center">
+  <img alt="Laser" src="https://img.shields.io/badge/laser-1550%20nm%20DFB%20self--mixing-b0245e">
+  <img alt="MCU" src="https://img.shields.io/badge/MCU-nRF52832-6b2fb3">
+  <img alt="Wired" src="https://img.shields.io/badge/wired%20module-11%C3%9741%20mm%20%C2%B7%20I2C-b0245e">
+  <img alt="Bluetooth" src="https://img.shields.io/badge/Bluetooth%20pod-BLE%20keyboard-6b2fb3">
+  <img alt="PCB" src="https://img.shields.io/badge/PCB-4%20layer%20%C2%B7%200%20DRC-5d6673">
+  <img alt="JLCPCB" src="https://img.shields.io/badge/JLCPCB-ready%20to%20order-e8590c">
+</p>
 
 <p align="center">
   <img alt="Subvocal Lidar pod on the right temple of a pair of glasses, its invisible 1550 nm beam drawn in red pointing down at the cheek" src="renders/glasses-pod.png" width="100%">
 </p>
 
-**Silent speech for eyewear, sensed with a 1550 nm laser.** A laser diode in the temple of a pair of glasses points
-down at the jaw muscle. When you mouth words without a sound, the skin there moves by fractions of a millimetre; the
-laser measures that movement to under a micrometre, and the electronics recognise the phrase you trained and type it.
+---
+
+A laser diode in the temple of a pair of glasses points down at the jaw muscle. When you mouth words without a sound,
+the skin there moves by fractions of a millimetre; the laser measures that movement to under a micrometre, and the
+electronics recognise the phrase you trained. Part of the Subvocal family with
+[Subvocal Radar](https://github.com/ajisrawi/subvocal-radar) (60 GHz, USB) and
+[Subvocal Radar v2](https://github.com/ajisrawi/subvocal-radar-v2) (Bluetooth handheld).
+
+<p align="center">
+  <img alt="How it works: mouth a phrase silently, the 1550 nm laser sees one fringe per 0.775 um of skin movement, the module counts fringes into displacement, matches your trained phrases and sends the text to the glasses or types it over Bluetooth" src="docs/assets/how-it-works.svg" width="100%">
+</p>
 
 It comes in two versions with the same sensor and firmware core:
 
@@ -77,6 +105,7 @@ bluetooth/enclosure/   printable pod shell, cover and button (STL)
 firmware/              common/ sensing + matching, wired/, bluetooth/, test/ (PC tests)
 render/                Blender scene and scripts for the images
 docs/LASER.md          the laser: what to buy, pins, eye safety, aiming
+docs/assets/           logo (SVG, JPG), icon, how-it-works diagram
 ```
 
 ## Status
