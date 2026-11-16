@@ -63,6 +63,8 @@ static uint16_t adc_single(uint32_t ain) {
     return v < 0 ? 0 : (uint16_t)v;
 }
 
+uint16_t laser_adc_mv(uint32_t ain) { return (uint16_t)(adc_single(ain) * 3300u / 4096u); }
+
 float laser_pd_ua(void) {
     float vout = adc_single(AIN_PD_DC) * 3.3f / 4096.0f;
     float ua = (VREF_HI_V - vout) / TIA_OHMS * 1e6f;

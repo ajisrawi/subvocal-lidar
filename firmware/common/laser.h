@@ -12,3 +12,4 @@ bool laser_is_on(void);
 float laser_pd_ua(void);                    // photodiode current now (single ADC reading; the laser must be on)
 void laser_set_code(uint16_t code);         // change the current while on (clamped to LASER_CODE_MAX)
 uint16_t laser_code(void);
+uint16_t laser_adc_mv(uint32_t ain);        // one averaged ADC reading of SAADC input `ain` (PSELP value), mV at the pin
