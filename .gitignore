@@ -1,0 +1,6 @@
+hardware/jlcpcb/.gerber-tmp/
+hardware/enclosure/build/
+firmware/build/
+firmware/_build/
+*.log
+*.blend1
